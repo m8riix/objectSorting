@@ -1,10 +1,16 @@
 package objectSortingPackage;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	
 	private String name;
 	private int id;
 	private String address;
+	
+	@Override
+	public int compareTo(Student o) {
+		
+		return this.getId()-o.getId();
+	}
 	
 	public Student() {
 		super();
@@ -36,5 +42,13 @@ public class Student {
 		this.id = id;
 		this.address = address;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", id=" + id + ", address=" + address + "]";
+	}
+
+	
+	
 
 }
