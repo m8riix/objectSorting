@@ -18,6 +18,9 @@ public class MainClass {
 		Collections.sort(list);
 		System.out.println(list);
 
+		//sorting using comparator class;
+		Collections.sort(list,new ComparatorClass());
+		System.out.println(list);
 	}
 
 }
